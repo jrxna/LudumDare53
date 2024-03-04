@@ -22,13 +22,13 @@ jobs:
           java-version: '17'
 
       - name: Build with Gradle
-        run: ./gradlew lwjgl3:jar
+        run: ./gradlew html:jar
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/lwjgl3/build/lib/*.jar'
+          path: '${{ github.workspace }}/html/build/libs/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
