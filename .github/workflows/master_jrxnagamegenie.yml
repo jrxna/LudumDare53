@@ -22,7 +22,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Gradle
-        run: gradle lwjgl3:jar
+        run: ./gradlew lwjgl3:jar
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
